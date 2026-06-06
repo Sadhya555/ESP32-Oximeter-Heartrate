@@ -15,6 +15,7 @@ A professional-grade, non-blocking Pulse Oximeter built with an ESP32, MAX30102,
 * 0.96" SSD1306 OLED Display (I2C)
 
 ## Wiring Diagram
+![Pulse Oximeter Wiring Diagram](docs/wiring_diagram.svg)
 | ESP32 Pin | MAX30102 | OLED (SSD1306) | Description |
 | :--- | :--- | :--- | :--- |
 | **3.3V** | VIN | VCC | Power |
