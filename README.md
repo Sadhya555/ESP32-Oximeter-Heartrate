@@ -1,6 +1,6 @@
 # ESP32 Pulse Oximeter & Heart Rate Monitor
 
-A professional-grade, non-blocking Pulse Oximeter built with an ESP32, MAX30102, and a 0.96" OLED display. This project uses digital signal processing to separate AC/DC optical signals for accurate SpO2 and Heart Rate tracking.
+A non-blocking Pulse Oximeter built with an ESP32, MAX30102, and a 0.96" OLED display. This project uses digital signal processing to separate AC/DC optical signals for accurate SpO2 and Heart Rate tracking.
 
 ## Features
 * **State Machine Architecture:** Clean transitions between waiting, measuring, and grace-period states.
@@ -15,13 +15,16 @@ A professional-grade, non-blocking Pulse Oximeter built with an ESP32, MAX30102,
 * 0.96" SSD1306 OLED Display (I2C)
 
 ## Wiring Diagram
-![Pulse Oximeter Wiring Diagram](docs/wiring_diagram.svg)
+<img width="1497" height="789" alt="WiringDiagram" src="https://github.com/user-attachments/assets/a00390b3-7c63-46b0-bad4-a74f94484a51" />
+
 | ESP32 Pin | MAX30102 | OLED (SSD1306) | Description |
 | :--- | :--- | :--- | :--- |
-| **3.3V** | VIN | VCC | Power |
+| **3.3V** | VIN | VCC | Provides Power |
 | **GND** | GND | GND | Ground |
 | **GPIO 21** | SDA | SDA | I2C Data |
 | **GPIO 22** | SCL | SCL | I2C Clock |
+
+Two external 4.7kΩ pull-up resistors are connected between the 3.3V power rail and the I2C lines (SDA and SCL) to ensure a stable 3.3V logic level, bypassing the MAX30102 breakout board's internal 1.8V flaw.
 
 ## Installation & Flashing
 This project is built using PlatformIO. 
