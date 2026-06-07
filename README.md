@@ -9,6 +9,11 @@ A Pulse Oximeter and Heart Rate Monitor built with an ESP32, MAX30102, and a 0.9
 * 2x 4.7kΩ resistors
 * Jumper Wires
 
+## Libraries Used
+* Adafruit GFX Library (by Adafruit)
+* Adafruit SSD1306 (by Adafruit)
+* SparkFun MAX3010x Pulse and Proximity Sensor Library (by SparkFun Electronics)
+
 ## Wiring Diagram
 <img width="1497" height="789" alt="WiringDiagram" src="https://github.com/user-attachments/assets/a00390b3-7c63-46b0-bad4-a74f94484a51" />
 
@@ -27,6 +32,13 @@ This project is built using PlatformIO.
 2. Open the project folder in VSCode with the PlatformIO extension installed.
 3. The `platformio.ini` file will automatically download the required Adafruit and SparkFun libraries.
 4. Click **Build** and **Upload**.
+
+To run this on Arduino IDE:
+1. Go to src > main.cpp
+2. Copy the entire code except for the first line `#include <Arduino.h>`
+3. Paste it onto Arduino IDE
+4. Download the required libraries mentioned above
+5. Upload
 
 ## Future Plans
 * Implement IoT in the form of a localhost website that monitors in the same way as the OLED Display
